@@ -119,7 +119,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (BASE_DIR / "base_static",)
+STATIC_ROOT = BASE_DIR / "static" # coletar arquivos estaticos
 
+MEDIA_URL = 'media/' # arquivos enviados via usuario
+MEDIA_ROOT = BASE_DIR / "media" # onde os arquivos enviados serao salvos
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
