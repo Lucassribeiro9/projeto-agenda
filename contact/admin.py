@@ -1,6 +1,10 @@
 from django.contrib import admin
 from contact import models
 # Register your models here.
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name')
+    search_fields = ('name',)
 @admin.register(models.Contact)
 class ContactAdmin(admin.ModelAdmin):
     list_display = ('id', 'first_name', 'last_name', 'phone', 'email', 'created_date')
